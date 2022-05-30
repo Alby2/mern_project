@@ -17,7 +17,7 @@ module.exports.follow = async (req,res)=>{
             {new:true,upsert:true},
             (err,data)=>{
                 if (err || data == null) {
-                     res.status(400).json({message:'Utilisateur introuvable'})
+                     res.status(400).json({message:'Utilisateur introuvable '})
                 }else{
                     res.status(200).json(data)
                 }
